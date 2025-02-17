@@ -1,9 +1,11 @@
 # irctc
+Railway booking api for workindia
 
 ### Installation & Setup
 
 1. Clone the Repository
-git clone https://github.com/your-username/railway-management.git
+
+    git clone https://github.com/your-username/railway-management.git
 
     cd railway-management
 
