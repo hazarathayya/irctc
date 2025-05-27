@@ -24,6 +24,7 @@ def token_required(f):
             print("Decoded token:", decoded_token)
             token = request.headers.get('Authorization')
             print("Received token:", token)
+            
 
             user = User.query.get(decoded_token['user_id'])
             g.user = {'id': user.id, 'username': user.username, 'role': user.role}

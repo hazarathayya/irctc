@@ -1,7 +1,7 @@
 from flask import request, jsonify
 from .models import Booking, Train, User
 from . import db
-from .routes import api_blueprint  # Import api_blueprint from routes.py
+from .routes import api_blueprint
 
 # Book a seat
 @api_blueprint.route('/book', methods=['POST'])
