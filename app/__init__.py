@@ -5,7 +5,7 @@ from .db import db
 from .models import User, Train, Booking  
 import os
 from .models import db
-from .routes import api_blueprint, register_booking_routes
+from .routes import api_blueprint
 from config import Config  
 
 from flask_sqlalchemy import SQLAlchemy
@@ -22,8 +22,8 @@ def create_app():
     db.init_app(app)
     
     app.register_blueprint(api_blueprint, url_prefix='/api')
-    
-    
+
+
     return app
 
 

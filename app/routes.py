@@ -97,17 +97,3 @@ def get_seat_availability():
 
     return jsonify({'trains': train_data}), 200
 
-# Function to register the booking routes
-def register_booking_routes(api_blueprint):
-    from .booking import book_seat, get_booking_details
-
-    @api_blueprint.route('/book', methods=['POST'])
-    @token_required
-    def book_seat_route():
-        return book_seat()
-
-    @api_blueprint.route('/booking/<int:booking_id>', methods=['GET'])
-    @token_required
-    def get_booking_route(booking_id):
-        return get_booking_details(booking_id)
-

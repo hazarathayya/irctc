@@ -17,7 +17,7 @@ def register():
     
     # hashed_password = generate_password_hash(data['password'], method='pbkdf2:sha256')
 
-    hashed_password = generate_password_hash(data['password'], method='HS256')
+    hashed_password = generate_password_hash(data['password'])
 
 
     existing_user = User.query.filter_by(username=data['username']).first()
